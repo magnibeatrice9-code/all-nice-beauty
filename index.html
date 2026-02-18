@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Nice Beauty</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #A4715B;
+  --secondary: #C89F8A;
+  --light: #E8D5CC;
+  --background: #F6ECE8;
+  --dark: #4A332B;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--dark);
+  scroll-behavior: smooth;
+  padding-top: 70px;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.nav-btn {
+  background: var(--primary);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: var(--secondary);
+}
+
+/* HERO */
+.hero {
+  background: url('hero.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 1.2s ease-out;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: var(--secondary);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* SEZIONI */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--secondary);
+  margin: 15px auto 0;
+  border-radius: 3px;
+}
+
+/* ABOUT */
+.about {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* SERVIZI */
+.service-card {
+  background: white;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+/* LISTINO */
+.listino {
+  background: var(--light);
+}
+
+.listino img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* INSTAGRAM */
+.instagram {
+  background: var(--light);
+}
+
+/* MAPPA */
+.map iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* CONTACT */
+.contact {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:768px){
+  .hero h1 { font-size: 34px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">All Nice Beauty</div>
+  <a href="https://wa.me/393383347153" class="nav-btn">Prenota</a>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>All Nice Beauty</h1>
+    <p>Epilazione, Trattamenti, Ciglia, Sopracciglia & Unghie</p>
+    <a href="https://wa.me/393383347153" class="btn">Prenota su WhatsApp</a>
+  </div>
+</section>
+
+<section class="about">
+  <h2>La tua bellezza, la mia passione</h2>
+  <p>
+    Offro trattamenti professionali personalizzati per valorizzare ogni dettaglio.
+    Precisione, qualità e attenzione al cliente sono al centro di ogni servizio.
+  </p>
+</section>
+
+<section>
+  <h2>Servizi</h2>
+
+  <div class="service-card">
+    <h3>Ciglia</h3>
+    <p>Laminazione – €70</p>
+    <p>Extension – €65</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Sopracciglia</h3>
+    <p>Laminazione – €45</p>
+    <p>Henna – €30</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Unghie</h3>
+    <p>Semipermanente – €30</p>
+    <p>Ricostruzione – €60/80</p>
+  </div>
+</section>
+
+<section class="listino">
+  <h2>Listino Completo</h2>
+  <img src="listino.jpg" alt="Listino prezzi">
+</section>
+
+<section class="gallery">
+  <h2>I miei lavori</h2>
+  <div class="gallery-grid">
+    <img src="ciglia.jpg">
+    <img src="sopracciglia.jpg">
+    <img src="unghie.jpg">
+  </div>
+</section>
+
+<section class="instagram">
+  <h2>Seguimi su Instagram</h2>
+  <a href="https://instagram.com/all_nice_beauty_" target="_blank" class="btn">
+    Vai al profilo Instagram
+  </a>
+</section>
+
+<section class="map">
+  <h2>Dove trovarmi</h2>
+  <iframe src="https://www.google.com/maps?q=Via+Borgo+Palazzo+65+Bergamo&output=embed"></iframe>
+</section>
+
+<section class="contact">
+  <h2>Contatti</h2>
+  <p>📍 Via Borgo Palazzo 65, Bergamo</p>
+  <p>📞 338 3347153</p>
+  <br>
+  <a href="https://wa.me/393383347153" class="btn">Scrivimi su WhatsApp</a>
+</section>
+
+<a href="https://wa.me/393383347153" class="whatsapp-float">💬</a>
+
+</body>
+</html>

@@ -57,7 +57,8 @@ body {
 
 /* HERO */
 .hero {
-  background: url('hero.jpg') center/cover no-repeat;
+  background: url('profilo.png') center top / contain no-repeat;
+  background-color: #000;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -225,7 +226,6 @@ h2::after {
 <section>
   <h2>Chi sono</h2>
   <div class="about-container">
-    <img src="profilo.png" alt="Foto profilo">
     <div class="about-text">
       <p>Da oltre 20 anni vivo il mondo dell’estetica.
 Da più di 10, mi dedico con passione a
@@ -251,11 +251,17 @@ E io sono qui per valorizzare il tuo.
     <p>Extension – €65</p>
   </div>
 
-  <div class="service-card">
-    <h3>Sopracciglia</h3>
-    <p>Laminazione – €45</p>
-    <p>Henna – €30</p>
-  </div>
+<div class="service-card">
+  <h3>Sopracciglia</h3>
+  <p>Laminazione – €45</p>
+  <p>Henna – €30</p>
+  <p><strong>Microblading</strong></p>
+  <p style="color: var(--primary); font-weight: 600; margin-top:10px;">
+    ✔️ Simulazione gratuita prima del trattamento 
+    <br>
+    (È la prova che vedi nell’immagine delle sopracciglia qui nel sito)
+  </p>
+</div>
 
   <div class="service-card">
     <h3>Unghie</h3>
@@ -273,6 +279,7 @@ E io sono qui per valorizzare il tuo.
   <h2>I miei lavori</h2>
   <div class="gallery-grid">
     <img src="ciglia.jpg">
+    <img src="hero.jpg">
     <img src="sopracciglia.jpg">
     <img src="unghie.jpg">
   </div>
@@ -316,6 +323,13 @@ Ci tornerò sicuramente!</p>
     Leggi tutte le recensioni su Google
   </a>
 
+</section>
+
+<section class="instagram">
+  <h2>Seguimi su Instagram</h2>
+  <a href="https://instagram.com/all_nice_beauty_" target="_blank" class="btn">
+    Vai al profilo Instagram
+  </a>
 </section>
 
 <section class="map">
